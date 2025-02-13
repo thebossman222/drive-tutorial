@@ -1,3 +1,4 @@
+// filepath: /d:/VScode/drive-tutorial/src/server/db/index.ts
 import { createClient, type Client } from "@libsql/client";
 import { drizzle } from "drizzle-orm/libsql";
 import { createPool, type Pool } from "mysql2/promise";
@@ -23,7 +24,6 @@ const conn =
     ssl: {},
     maxIdle: 0,
   });
-if (env.NODE_ENV !== "production") globalForDb.conn = conn;
 
 conn.addListener("error", (err: any) => {
   console.error("Database error", err);

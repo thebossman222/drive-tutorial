@@ -1,6 +1,7 @@
-// drizzle.config.ts
+// filepath: /d:/VScode/drive-tutorial/drizzle.config.ts
 import { defineConfig } from "drizzle-kit";
-import { env } from "process";
+import { env } from "./src/env";
+
 export default defineConfig({
     dialect: "singlestore",
     schema: "./src/server/db/schema.ts",
@@ -8,9 +9,8 @@ export default defineConfig({
         host: env.SINGLESTORE_HOST,
         user: env.SINGLESTORE_USER,
         password: env.SINGLESTORE_PASS,
-        database: env.SINGLESTORE_DB_NAME,
         port: env.SINGLESTORE_PORT,
-	ssl: {},
-  maxIdle: 0, 
+        database: env.SINGLESTORE_DB_NAME,
+        ssl: {},
     },
 });
