@@ -10,7 +10,7 @@ const config = {
     ignoreDuringBuilds: true,
     },
 
-    typeScript: {
+    typescript: {
         ignoreBuildErrors: true,
     },
 };
